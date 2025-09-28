@@ -1,11 +1,13 @@
 export default function handler(req, res) {
-  if (req.method === 'POST') {
-    const data = req.body; // form data
-    console.log("Form submitted:", data);
+  if (req.method === "POST") {
+    const { name, email, number, wish } = req.body;
 
-    // Here you could send email, save to database, etc.
-    res.status(200).json({ message: 'Form received!' });
+    // For now, just send back a success message
+    res.status(200).json({
+      message: "Form submitted successfully!",
+      data: { name, email, number, wish },
+    });
   } else {
-    res.status(405).json({ message: 'Method not allowed' });
+    res.status(405).json({ message: "Method not allowed" });
   }
 }
