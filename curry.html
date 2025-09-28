@@ -12,9 +12,9 @@
 <body>
     <h1 id="title">Curry Survey Form</h1>
     <p id="description">This is a survey form about my beloved cat, Curry, who has passed away.</p>
-    <form id="survey-form">
+    <form id="survey-form" action="/api/submit" method="POST">
         <fieldset>
-            <label for="name" id="name-label">Name
+            <label for="name" id="name-label" >Name
                 <input id="name" type="text" placeholder="Enter Your Name" required />
             </label>
             <label for="email" id="email-label">Email <input id="email" type="email" placeholder="Enter Your Email"
@@ -63,3 +63,4 @@
 
 
 </html>
+
