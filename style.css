@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgba(11, 11, 11, 0.799), rgba(237, 237, 237, 0.5)), url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+    background-image: linear-gradient(rgba(11, 11, 11, 0.799), rgba(237, 237, 237, 0.5)), url("curry.jpeg");
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -76,4 +76,5 @@ textarea {
     background-color: white;
     border: solid 2px rgb(32, 32, 32);
     color: rgb(32, 32, 32);
+
 }
