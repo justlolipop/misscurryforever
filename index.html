@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curry Survey Form</title>
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="title">Curry Survey Form</h1>
+    <p id="description">This is a survey form about my beloved cat, Curry, who has passed away.</p>
+    <form id="survey-form" action="/api/submit" method="POST">
+        <fieldset>
+            <label for="name" id="name-label" >Name
+                <input id="name" type="text" name="name" placeholder="Enter Your Name" required />
+            </label>
+            <label for="email" id="email-label">Email <input id="email" type="email" name="email" placeholder="Enter Your Email"
+                    required /></label>
+            <label for="number" id="number-label">Age <input id="number" type="number" name="number" min="1" max="2"
+                    placeholder="Enter Your Age" required /></label>
+            <label> Do You Love Curry?
+                <select id="dropdown" name="love-curry">
+                    <option>Base on your heart</option>
                     <option>NOPE</option>
                     <option>LOVE</option>
                 </select>
