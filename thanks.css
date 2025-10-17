@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.thank-you-container {
+    text-align: center;
+    padding: 35px 20px;
+    max-width: 650px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.cat-emoji {
+    background-image: url("curryemoji.png");
+    display: inline-block;
+    width: 7em;
+    /* Matches the current font size */
+    height: 7em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Aligns it nicely with text */
+    animation: float 3s ease-in-out infinite;
+    filter: brightness(2.5);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.curryword {
+    color: black;
+
+}
+
+.thank-you-message {
+    font-size: 2.5em;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.message-detail {
+    font-family: "Signika Negative", sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #464646;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+
+
+
+.calendercontainer {
+    background-color: rgba(250, 250, 250, 0.312);
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    min-width: 100px;
+    max-width: 350px;
+
+}
+
+.calender {
+    background: rgba(255, 255, 255, 0.3);
+    border: 0px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.daystitle,
+.days-counter {
+    color: rgb(236, 46, 97);
+    font-size: 4em;
+    font-weight: bolder;
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3;
+}
+
+.time-display {
+    margin: 5px;
+}
+
+.time-unit {
+    display: inline-block;
+}
+
+.time-value {
+    color: #464646;
+    ;
+    display: inline-block;
+    padding: 2px;
+    margin: 2px;
+    font-size: 40px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.time-display span {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+.love-button {
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px 30px;
+    background-color: rgba(255, 255, 255, 0.682);
+    color: #464646;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.love-button:hover {
+    color: #464646;
+    color: black;
+}
+
+
+
+
+
+#my-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Full screen */
+    z-index: -3;
+    top: 0;
+    left: 0;
+}
+
+.curry {
+    width: 250px;
+    /* 20% of screen width */
+    height: auto;
+    position: fixed;
+    left: 250px;
+    top: 400px;
+}

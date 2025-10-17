@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE YOU CURRY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Knewave&family=Roboto:ital,wght@0,100..900;1,100..900&family=Signika+Negative:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link href="thanks.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <audio id="bgMusic" autoplay loop style="display: none;">
+        <source src="roku.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio> -->
+    <!-- <script src="thanks.js"></script> -->
+    <div id="my-background"></div>
+    <div class="thank-you-container">
+        <div class="cat-emoji" title="DON'T FORGET CURRY ,BY LOLI"></div>
+        <h1 class="thank-you-message">Thank You for Remembering <span class="curryword">Curry </span>!</h1>
+        <p class="message-detail">
+            Your heartfelt message has been received. Curry would have loved knowing
+            how much you care. Every memory and wish keeps the spirit alive. ❤️
+        </p>
+        <a href="love.html" class="love-button"> To WishBoard -></a>
+    </div>
+    <div class="calendercontainer">
+        <div class="calender">
+            <div class="daystitle">DAYS</div>
+            <div class="days-counter" id="daysCounter">0</div>
+        </div>
+        <div class="time-display">
+            <div class="time-unit">
+                <div class="time-value" id="hours">00</div>
+            </div>
+            <span>:</span>
+            <div class="time-unit">
+                <div class="time-value" id="minutes">00</div>
+            </div>
+            <span>:</span>
+            <div class="time-unit">
+                <div class="time-value" id="seconds">00</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <video class="curry" width="20" height="30" autoplay loop muted>
+        <source src="dance.mp4" type="video/mp4">
+    </video>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+    <script>
+        VANTA.CLOUDS({
+            el: "#my-background",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            speed: 1.10,
+            skyColor: 0x5e5ed1,
+            cloudColor: 0xb6dcff,    // White clouds
+            cloudShadowColor: 0x3254a, // Light gray cloud shadows
+            sunColor: 0xff9919,      // Orange sun
+            sunGlareColor: 0xe8ca51,
+            sunlightColor: 0xf7ede2,
+        })
+    </script>
+    <script>
+        // Day 1 starts on September 4, 2025
+        const startDate = new Date('2025-09-04T00:00:00');
+
+        function updateCounter() {
+            const now = new Date();
+            const diff = now - startDate;
+
+            // Calculate days (adding 1 so Sept 4 = Day 1)
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1;
+
+            // Calculate remaining hours, minutes, seconds
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            // Update display
+            document.getElementById('daysCounter').textContent = days;
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        // Update immediately and then every second
+        updateCounter();
+        setInterval(updateCounter, 1000);
+    </script>
+
+</body>
+
+</html>
