@@ -16,7 +16,12 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
-
+  
+  if (!process.env.DATABASE_URL) {
+    return res.status(500).json({
+      error: 'DATABASE_URL not set in environment variables!'
+    });
+  }
   // Connect to Neon using DATABASE_URL from .env
   const sql = neon(process.env.DATABASE_URL);
 
