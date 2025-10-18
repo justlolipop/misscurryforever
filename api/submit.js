@@ -108,7 +108,8 @@ export default async function handler(req, res) {
       console.log('✅ Wish saved successfully!');
 
       // Redirect to thank you page
-      return res.redirect(302, '/thanks.html');
+      res.setHeader('Location', '/thanks.html');
+      return res.status(302).end();
 
     } catch (error) {
       console.error('❌ POST Error:', error);
